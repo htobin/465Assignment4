@@ -36,7 +36,7 @@ function main() {
   var interest = initialLoanAmount * interestDecimal;
   if( monthly <= interest)
   {
-    alert('Monthly payment must be higher');
+    alert('Monthly payment must be higher. Monthly interest is more than monthly payments.');
     return;
   }
 

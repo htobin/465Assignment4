@@ -3,32 +3,41 @@
 <head>
   <meta charset="UTF-8">
   <title>Assignment 4</title>
-  <meta charset="utf-8">
-  <!-- Load d3.js -->
+  <link href="style.css" rel="stylesheet"/>
+    <!-- Load d3.js -->
   <script
       src="https://code.jquery.com/jquery-3.4.1.min.js"
       integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-      crossorigin="anonymous"></script>
+      crossorigin="anonymous">
+  </script>
 
   <script src="https://d3js.org/d3.v4.js"></script>
 
 </head>
+
+<body>
+<h3>Loan Calculator</h3>
+<h4>Graphs loan amount & payments starting from 6 months after graduation.</h4>
 <!-- Create a div where the graph will take place -->
 <div id="my_dataviz"></div>
-<label>Loan amount 6 months after graduation</label>
-<input typeof="number" id="initial" value="20000">
+<div class="labels">
+<label>Loan amount</label>
+<input class="inputs" typeof="number" id="initial" value="20000">
 </br>
+
 <label>Monthly payment</label>
-<input typeof="number" id="monthly" value="10000"/>
+<input class="inputs" typeof="number" id="monthly" value="10000"/>
 </br>
+
 <label>Interest rate</label>
-<input typeof="number" id="interest" value="3.5"/>
+<input class="inputs" typeof="number" id="interest" value="3.5"/>
 </br>
+</div>
+
 <button id="calculate">Calculate</button>
 
-
-
 </body>
+
 <script src="main.js"></script>
 <script src="script.js"></script>
 </html>

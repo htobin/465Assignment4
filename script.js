@@ -7,7 +7,7 @@ clickToRefresh();
 function clickToRefresh() {
   d3.selectAll('svg').remove();
   // set the dimensions and margins of the graph
-  var margin = { top: 10, right: 30, bottom: 30, left: 60 },
+  var margin = { top: 10, right: 30, bottom: 40, left: 60 },
       width = 650 - margin.left - margin.right,
       height = 300 - margin.top - margin.bottom;
 
@@ -29,6 +29,10 @@ function clickToRefresh() {
   svg.append("g")
       .attr("transform", "translate(0," + height + ")")
       .call(d3.axisBottom(x));
+  svg.append("text")      // text label for the x axis
+      .attr("transform", "translate(" + (width / 2) + " ," + (height + margin.bottom) + ")")
+      .style("text-anchor", "middle")
+      .text("Date");
 
 // Add Y axis
   var y = d3.scaleLinear()
@@ -38,6 +42,13 @@ function clickToRefresh() {
       .range([height, 0]);
   svg.append("g")
       .call(d3.axisLeft(y));
+  svg.append("text")
+      .attr("transform", "rotate(-90)")
+      .attr("y",0 - margin.left)
+      .attr("x",0 - (height / 2))
+        .attr("dy", "1em")
+        .style("text-anchor", "middle")
+        .text("Loan Amount");
 
 // Add the line
   svg.append("path")

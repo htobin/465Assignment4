@@ -1,6 +1,8 @@
 
-
-
+// Code used from https://www.d3-graph-gallery.com/graph/line_basic.html for the creation of the graph
+// Adjustments:
+//    Prevent graph from showing negative values
+//    Clicking the button for the graph creates a new graph and removes the old one
 clickToRefresh();
 function clickToRefresh() {
   d3.selectAll('svg').remove();

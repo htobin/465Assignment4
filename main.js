@@ -1,19 +1,4 @@
-//Calculate each month of payments
-//Current Month's balance
-//If current month is not month 0
-//Then current month's balance = last months balance + (last month's balance * interest rate) - (payment per month)
-
-// var interest rate = submitted by user
-// var monthly payment.
-
-// function calculate(lastDate, lastMonthsBalance, balanceCheck) {
-//
-//   //for the calculation
-//   var currentBalance = lastMonthsBalance + (lastMonthsBalance * 3.5) - (400);
-//   balanceCheck = currentBalance;
-//   var d3Data = { date: lastDate.setMonth(lastDate.getMonth() + 1), value: currentBalance };
-//   return d3Data;
-// }
+//Code created by Hoku Tobin with adjustments by Dennis Kim
 
 function main() {
 

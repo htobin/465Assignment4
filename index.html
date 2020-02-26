@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <title>Assignment 4</title>
   <link href="style.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
     <!-- Load d3.js -->
   <script
       src="https://code.jquery.com/jquery-3.4.1.min.js"
@@ -13,6 +14,7 @@
   </script>
 
   <script src="https://d3js.org/d3.v4.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
 
 </head>
 
@@ -21,23 +23,31 @@
 <h4>Graphs loan amount & payments starting from 6 months after graduation.</h4>
 <!-- Create a div where the graph will take place, d3 graph template -->
 <div id="my_dataviz"></div>
-<!--All of the  code below is created by Hoku.-->
-<div class="labels">
-<label>Loan amount</label>
-<input class="inputs" typeof="number" id="initial" value="20000">
-</br>
-
-<label>Monthly payment</label>
-<input class="inputs" typeof="number" id="monthly" value="10000"/>
-</br>
-
-<label>Interest rate</label>
-<input class="inputs" typeof="number" id="interest" value="3.5"/>
+<!--All of the  code below is created by Hoku and Sophia-->
+<div class="top-label">
+  <div class="ui right labeled input">
+    <label for="initial" class="ui label">Loan Amount</label>
+    <input type="text" placeholder="Amount" id="initial">
+    <div class="ui basic label">.00</div>
+  </div>
 </br>
 </div>
 
-<button id="calculate">Calculate</button>
+<div class="ui right labeled input">
+  <label for="initial" class="ui label">Monthly Payment</label>
+  <input type="text" placeholder="Amount" id="monthly">
+  <div class="ui basic label">.00</div>
+</div>
+</br>
 
+<div class="ui right labeled input">
+  <label for="initial" class="ui label">Interest Rate</label>
+  <input type="text" placeholder="Rate" id="interest">
+  <div class="ui basic label">%</div>
+</div>
+</br>
+
+<div class="ui teal basic button" id="calculate">Calculate</div>
 </body>
 
 <script src="main.js"></script>

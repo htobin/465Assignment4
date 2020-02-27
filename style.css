@@ -5,23 +5,14 @@ body {
   text-align: center;
 }
 
-button {
-  font-size: 16px;
-  font-weight: bold;
-  border-radius: 10px;
-  padding: 5px;
-  background-color: whitesmoke;
+.ui.teal.basic.button {
+  margin-top: 10px;
 }
 
-.labels {
-  margin: auto;
-  width: 40%;
-  border: 3px;
+.ui.input {
+  margin-top: 10px;
 }
 
-input {
-  text-align: center;
-  width: 10%;
+.top-label {
+  margin-top: 40px;
 }
-
-

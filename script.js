@@ -30,9 +30,9 @@ function clickToRefresh() {
       .attr("transform", "translate(0," + height + ")")
       .call(d3.axisBottom(x));
   svg.append("text")      // text label for the x axis
-      .attr("transform", "translate(" + (width / 2) + " ," + (height + margin.bottom) + ")")
+      .attr("transform", "translate(" + (width / 2) + " ," + (height - 10 + margin.bottom) + ")")
       .style("text-anchor", "middle")
-      .text("Date");
+      .text("Timeline of payment");
 
 // Add Y axis
   var y = d3.scaleLinear()

@@ -1,12 +1,13 @@
 //Code created by Hoku Tobin with adjustments by Dennis Kim
 
+//Start of Hoku's code
 function main() {
 
   //Variables on the webpage
   var monthly = parseInt($('#monthly').val());
   var initialLoanAmount = parseInt($('#initial').val());
   var interestPercent = parseInt($('#interest').val());
-  var interestDecimal = interestPercent / 100;
+  var interestDecimal = (interestPercent / 100)/12;
 
   //create data array to store all values
   var data = [];
@@ -21,6 +22,8 @@ function main() {
   var interest = initialLoanAmount * interestDecimal;
   if( monthly <= interest)
   {
+    console.log(monthly);
+    console.log(interest);
     alert('Monthly payment must be higher. Monthly interest is more than monthly payments.');
     return;
   }
@@ -64,3 +67,5 @@ $('#calculate').on('click', function(){
   clickToRefresh();
 
 })
+
+//End of Hoku's code

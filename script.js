@@ -4,9 +4,13 @@
 //    Prevent graph from showing negative values
 //    Clicking the button for the graph creates a new graph and removes the old one
 clickToRefresh();
+
+//This function refreshes the SVG each time the user enters new information and clicks the graph button
 function clickToRefresh() {
+  //remove SVG
   d3.selectAll('svg').remove();
-  // set the dimensions and margins of the graph
+  
+  // set the dimensions and margins of the graph: Modifications done by Dennis kim
   var margin = { top: 10, right: 30, bottom: 40, left: 60 },
       width = 650 - margin.left - margin.right,
       height = 300 - margin.top - margin.bottom;
@@ -20,6 +24,8 @@ function clickToRefresh() {
       .attr("transform",
           "translate(" + margin.left + "," + margin.top + ")");
   var data = main();
+  
+  
 // Add X axis --> it is a date format
   var x = d3.scaleTime()
       .domain(d3.extent(data, function (d) {
@@ -34,7 +40,7 @@ function clickToRefresh() {
       .style("text-anchor", "middle")
       .text("Timeline of payment");
 
-// Add Y axis
+// Add Y axis: Modified by Sophia Kim to produce better y labels
   var y = d3.scaleLinear()
       .domain([0, d3.max(data, function (d) {
         return +d.value;

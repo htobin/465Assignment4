@@ -7,6 +7,8 @@ function main() {
   var monthly = parseInt($('#monthly').val());
   var initialLoanAmount = parseInt($('#initial').val());
   var interestPercent = parseInt($('#interest').val());
+  
+  //take the yearly interest rate and divide by 12 as payments will be monthly
   var interestDecimal = (interestPercent / 100)/12;
 
   //create data array to store all values
@@ -31,7 +33,7 @@ function main() {
 
 
 
-  //while loop to go through all value
+  //while loop to go through all values until the balance is
   while (currentBalance > 0) {
 
     //calculate the current balance
@@ -52,16 +54,8 @@ function main() {
   return data;
 }
 
-function valueCheck(){
-  var monthly = $('#monthly').val();
-  var initialLoanAmount = $('#initial').val();
-  if(monthly <= 0 || initialLoanAmount <= 0){
-    return false;
-  }
-  return true;
-}
 
-
+//Calculate button refreshes the SVG  and creates the graph
 $('#calculate').on('click', function(){
 
   clickToRefresh();

@@ -7,7 +7,7 @@ clickToRefresh();
 
 //This function refreshes the SVG each time the user enters new information and clicks the graph button
 function clickToRefresh() {
-  //remove SVG
+  //remove SVG to create a blank/new sSVG
   d3.selectAll('svg').remove();
   
   // set the dimensions and margins of the graph: Modifications done by Dennis kim
@@ -23,6 +23,8 @@ function clickToRefresh() {
       .append("g")
       .attr("transform",
           "translate(" + margin.left + "," + margin.top + ")");
+  
+  //data for the graph is created in the main function, when the calculate button is pressed
   var data = main();
   
   

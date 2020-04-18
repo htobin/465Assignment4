@@ -1,4 +1,4 @@
-//Code created by Hoku Tobin
+//All code created by Hoku Tobin
 
 function main() {
 

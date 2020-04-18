@@ -69,6 +69,7 @@ function clickToRefresh() {
             return x(d.date)
           })
           .y(function (d) {
+            //Modification
             if (d.value < 0) return;
             else return y(d.value);
           })

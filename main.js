@@ -1,6 +1,5 @@
-//Code created by Hoku Tobin with adjustments by Dennis Kim
+//Code created by Hoku Tobin
 
-//Start of Hoku's code
 function main() {
 
   //Variables on the webpage
@@ -61,5 +60,3 @@ $('#calculate').on('click', function(){
   clickToRefresh();
 
 })
-
-//End of Hoku's code

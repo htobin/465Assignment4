@@ -10,7 +10,7 @@ function clickToRefresh() {
   //remove SVG to create a blank/new sSVG
   d3.selectAll('svg').remove();
   
-  // set the dimensions and margins of the graph: Modifications done by Dennis kim
+  // set the dimensions and margins of the graph  Modifications done by Dennis kim
   var margin = { top: 10, right: 30, bottom: 40, left: 60 },
       width = 650 - margin.left - margin.right,
       height = 300 - margin.top - margin.bottom;
@@ -28,7 +28,7 @@ function clickToRefresh() {
   var data = main();
   
   
-// Add X axis --> it is a date format
+// Add X axis --> it is a date format: Modified by Sophie so that way the Axis shows up correctly
   var x = d3.scaleTime()
       .domain(d3.extent(data, function (d) {
         return d.date;
@@ -42,7 +42,7 @@ function clickToRefresh() {
       .style("text-anchor", "middle")
       .text("Timeline of payment");
 
-// Add Y axis: Modified by Sophia Kim to produce better y labels
+// Add Y axis: Modified by Sophia Kim to produce more accurate y labels
   var y = d3.scaleLinear()
       .domain([0, d3.max(data, function (d) {
         return +d.value;
@@ -58,7 +58,7 @@ function clickToRefresh() {
         .style("text-anchor", "middle")
         .text("Loan Amount");
 
-// Add the line
+// Add the line:  Modifications done by Dennis kim to prevent line from going straight down when the balance value is 0
   svg.append("path")
       .datum(data)
       .attr("fill", "none")
